@@ -1,5 +1,4 @@
 import styles from "./Calculator.module.css";
-import Button from "../Buttons/Button";
 import { useState } from "react";
 
 const Calculator = () => {
@@ -40,7 +39,7 @@ const Calculator = () => {
                     setOutput("NaN");
                     return NaN;
                 }
-                if(operand2 == 0){
+                if (operand2 === 0) {
                     setOutput("Infinity");
                     return Infinity;
                 }
@@ -89,22 +88,22 @@ const Calculator = () => {
             <input type="text" value={values} readOnly />
             {output && <div className={styles.output}>{output}</div>}
             <div className={styles.typepad}>
-                <Button text="7" onClick={() => handleClick("7")} />
-                <Button text="8" onClick={() => handleClick("8")} />
-                <Button text="9" onClick={() => handleClick("9")} />
-                <Button text="+" onClick={() => handleClick("+")} />
-                <Button text="4" onClick={() => handleClick("4")} />
-                <Button text="5" onClick={() => handleClick("5")} />
-                <Button text="6" onClick={() => handleClick("6")} />
-                <Button text="-" onClick={() => handleClick("-")} />
-                <Button text="1" onClick={() => handleClick("1")} />
-                <Button text="2" onClick={() => handleClick("2")} />
-                <Button text="3" onClick={() => handleClick("3")} />
-                <Button text="*" onClick={() => handleClick("*")} />
-                <Button text="C" onClick={() => handleClick("C")} />
-                <Button text="0" onClick={() => handleClick("0")} />
-                <Button text="=" onClick={() => handleClick("=")} />
-                <Button text="/" onClick={() => handleClick("/")} />
+                <button className={styles.button} onClick={() => handleClick("7")}>7</button>
+                <button className={styles.button} onClick={() => handleClick("8")}>8</button>
+                <button className={styles.button} onClick={() => handleClick("9")}>9</button>
+                <button className={styles.button} onClick={() => handleClick("+")}>+</button>
+                <button className={styles.button} onClick={() => handleClick("4")}>4</button>
+                <button className={styles.button} onClick={() => handleClick("5")}>5</button>
+                <button className={styles.button} onClick={() => handleClick("6")}>6</button>
+                <button className={styles.button} onClick={() => handleClick("-")}>-</button>
+                <button className={styles.button} onClick={() => handleClick("1")}>1</button>
+                <button className={styles.button} onClick={() => handleClick("2")}>2</button>
+                <button className={styles.button} onClick={() => handleClick("3")}>3</button>
+                <button className={styles.button} onClick={() => handleClick("*")}>*</button>
+                <button className={styles.button} onClick={() => handleClick("C")}>C</button>
+                <button className={styles.button} onClick={() => handleClick("0")}>0</button>
+                <button className={styles.button} onClick={() => handleClick("=")}>=</button>
+                <button className={styles.button} onClick={() => handleClick("/")}>/</button>
             </div>
         </div>
     );
