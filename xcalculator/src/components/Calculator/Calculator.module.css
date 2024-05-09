@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 500px;
+    height: auto;
+    padding : 10px;
+}
+
+.typepad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.box {
+    width: 40%;
+    border: 1px solid black;
+    height: 25px;
+}
